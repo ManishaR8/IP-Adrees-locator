@@ -8,7 +8,7 @@ const IPAddress = () => {
   const [location, setLocation] = useState('');
   const [timeZone, setTimeZone] = useState('');
   const [ISP, setISP] = useState('');
-  const [coordinates, setCoordinates] = useState(null); // Initialize coordinates as null
+  const [coordinates, setCoordinates] = useState(null); 
 
   const fetchLocation = (ipAddress = '') => {
     fetch(
@@ -35,7 +35,7 @@ const IPAddress = () => {
     <div className="flex flex-col h-screen relative">
       <SearchBar setIpAddress={setIpAddress} fetchLocation={fetchLocation} />
       <Stats ipAddress={ipAddress} location={location} timeZone={timeZone} isp={ISP} />
-      {coordinates && <Map coordinates={coordinates} />} {/* Render Map only when coordinates are available */}
+      {coordinates && <Map coordinates={coordinates} />}
     </div>
   );
 };
